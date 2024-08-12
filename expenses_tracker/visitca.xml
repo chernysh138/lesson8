@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <visit>
-<user name = "Bill Gates" tel= "380665855467" email= "bill@gates" category="junior Ruby">
-
-
-</user>
-
+<name>Bill Gates</name>
+<tel>0665855467</tel>
+<email>bill@gates</email>
+<profil>junior ruby</profil>
 
 </visit>

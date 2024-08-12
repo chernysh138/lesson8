@@ -6,11 +6,10 @@ end
 file = File.new(file_path)
 doc = REXML::Document.new(file)
 file.close
-visitca_mas = []
-doc.elements.each("visit/user") do |item|
-  visitca_mas << item.attributes["name"]
-  visitca_mas << item.attributes["tel"]
-  visitca_mas << item.attributes["email"]
-  visitca_mas << item.attributes["category"]
+visitca_mas = {}
+["name", "tel", "email", "profil"].each do |item|
+  visitca_mas[item] = doc.root.elements[item].text
 end
-puts visitca_mas
+puts "#{visitca_mas["name"]} tel: #{visitca_mas["tel"]}"
+puts visitca_mas["email"]
+puts "profil: #{visitca_mas["profil"]}"
